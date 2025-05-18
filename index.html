@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-md bg-white shadow-xl rounded-2xl p-8 space-y-6">
+      <h1 class="text-3xl font-bold text-center text-indigo-700">🌤️ Weather App</h1>
+      <form id="weatherForm" class="space-y-4">
+        <input
+          id="city"
+          onchange="Changed()"
+          type="text"
+          placeholder="Enter the city"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          id="get"
+          type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+        >
+          Get Weather
+        </button>
+      </form>
+
+      
+
+      <div id="content" class="mt-6 space-y-2 text-gray-700 text-sm">
+        <div id="result" class="text-center text-red-500 font-medium"></div>
+        <div id="date_time" class="font-semibold text-lg text-indigo-600"></div>
+        <div id="temp"></div>
+        <div id="pressure"></div>
+        <div id="humidity"></div>
+        <div id="description"></div>
+        <div id="wind"></div>
+        <div id="feel-like"></div>
+      </div>
+      <button
+    id="clear"
+    type="button"
+    class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+  >
+    Clear Data
+  </button>
+    </div>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>
